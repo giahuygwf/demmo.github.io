@@ -10,7 +10,7 @@ function displayMenu() {
 
     // Add 'click' event to all menu items.
     const excludedItems = ['menu-cart-total', 'menu-logout'];
-    var menuItems = document.querySelectorAll(`[id^='menu-']`);
+    let menuItems = document.querySelectorAll(`[id^='menu-']`);
     menuItems = Array.from(menuItems).filter(element => !excludedItems.includes(element.id));
 
     for (let item of menuItems)
@@ -20,12 +20,12 @@ function displayMenu() {
 }
 
 function isLogout() {
-    const email = getSessionLoginEmail();
-    return email === null;
+    const user = getSessionLoginUser();
+    return user === null;
 }
 
 function logout() {
-    removeSessionLoginEmail();
+    removeSessionLoginUser();
     location.reload();
 }
 
@@ -69,7 +69,6 @@ function setMenuItemActive(pageName) {
 }
 
 function removeMenuItemActive() {
-    if (document.querySelector('.nav-item a.active') !== null) {
+    if (document.querySelector('.nav-item a.active') !== null)
         document.querySelector('.nav-item a.active').classList.remove('active');
-    }
 }

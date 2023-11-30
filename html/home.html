@@ -28,18 +28,16 @@
     <!-- End Carousel -->
 
     <!-- Popular Products -->
-    <div class='fs-1 mt-5'>
+    <div class='fs-1 mt-5 mb-3 border-bottom border-success text-success'>
         Popular Products
-        <hr>
     </div>
 
     <div class='row' id='popular-product-list'></div>
     <!-- End Popular Products -->
 
     <!-- New Arrivals -->
-    <div class='fs-1 mt-5'>
+    <div class='fs-1 mt-5 mb-3 border-bottom border-success text-success'>
         New Arrivals
-        <hr>
     </div>
 
     <div class='row' id='new-arrival-product-list'></div>
@@ -49,24 +47,20 @@
 <script>
     pageTitle.innerHTML = 'Home';
 
-    showProducts();
+    showPopularProducts();
+    showNewArrivalProducts();
 
-    function showProducts() {
-        showPopularProducts();
-        showNewArrivalProducts();
-    }
-
-    function showPopularProducts() {
+    async function showPopularProducts() {
         const productList = document.getElementById('popular-product-list');
+        const products = await dbGetProducts();
 
-        for (var item of getSessionProducts())
-            productList.innerHTML += displayProductCard(item);
+        displayProducts(productList, products);
     }
 
-    function showNewArrivalProducts() {
+    async function showNewArrivalProducts() {
         const productList = document.getElementById('new-arrival-product-list');
+        const products = await dbGetProducts();
 
-        for (var item of getSessionProducts())
-            productList.innerHTML += displayProductCard(item);
+        displayProducts(productList, products);
     }
 </script>
