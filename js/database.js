@@ -4,13 +4,13 @@ const dbProductName = 'products';
 const sessionLoginUser = 'loginUser';
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
+    apiKey: "AIzaSyD6xU_mFh2lCX_O1vH7vCs3LjvNeo5Nf74",
     authDomain: "woddy-cccab.firebaseapp.com",
     projectId: "woddy-cccab",
     storageBucket: "woddy-cccab.appspot.com",
     messagingSenderId: "250264088768",
-    appId: "1:250264088768:web:349afd7a25b2dec18bfd25",
-  };
+    appId: "1:250264088768:web:349afd7a25b2dec18bfd25"
+};
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
