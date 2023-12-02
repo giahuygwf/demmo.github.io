@@ -5,12 +5,12 @@
 <script>
     pageTitle.innerHTML = 'Products';
 
-    showProducts();
+    showAllProducts();
 
-    function showProducts() {
+    async function showAllProducts() {
         const productList = document.getElementById('product-list');
+        const products = await dbGetProducts();
 
-        for (var item of getSessionProducts())
-            productList.innerHTML += displayProductCard(item);
+        displayProducts(productList, products);
     }
 </script>
