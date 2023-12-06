@@ -1,8 +1,30 @@
 /* Chrome, Safari, Edge, Opera */
 #cart input::-webkit-outer-spin-button,
-#cart input::-webkit-inner-spin-button {
+#cart input::-webkit-inner-spin-button 
+{
     -webkit-appearance: none;
     margin: 0;
+}
+.custom-navbar {
+    background-color: #69b5e8; 
+}
+
+.btn-success {
+    background-color: #82f4f8; /* Mã màu xanh lá cây của Bootstrap */
+    border-color: rgb(40, 167, 140); /* Có thể giống màu background hoặc bạn có thể chọn màu khác cho border */
+    color: #ffffff; /* Màu chữ trắng */
+}
+.btn-success {
+    background-color: #82f4f8; /* Mã màu xanh lá cây của Bootstrap */
+    border-color: rgb(40, 167, 140); /* Có thể giống màu background hoặc bạn có thể chọn màu khác cho border */
+    color: #ffffff; /* Màu chữ trắng */
+}
+
+/* Đối với nút có màu đỏ */
+.btn-danger {
+    background-color: #e56f7b; /* Mã màu đỏ của Bootstrap */
+    border-color: #a67176;
+    color: #ffffff;
 }
 
 /* Firefox */
